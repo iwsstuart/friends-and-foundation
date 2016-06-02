@@ -1,0 +1,11 @@
+extends layout/layout.jade
+block pagecontent
+  -var NavbarVersion = 'onepage'
+  include _navbar.jade
+  -var headerversion = 5
+  include components/_header.jade
+  include components/_about-us.jade
+  include components/_upcoming-events.jade
+  include components/_our-team.jade
+  -var footerversion = "darkcenter"
+  include components/_footer.jade

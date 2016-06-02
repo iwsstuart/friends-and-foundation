@@ -1,0 +1,50 @@
+body {
+  color: $primary-text;
+  font-family: Merriweather;
+  font-weight: 400;
+  font-size: $primary-font-size;
+  line-height: $baseline;
+  background: #fff;
+}
+
+h1,h2 {
+  text-transform: uppercase;
+  font-family: Hind;
+  font-weight: 300;
+}
+h3,h4,h5,h6 {
+  text-transform: capitalize; 
+  font-family: Hind;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  color: $primary-color;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: $secondary-text;
+}

@@ -1,0 +1,39 @@
+-var teamnames = ['Dan Whitehurst','Jack Stuart','Leslie Moreland','Jodine Whisten']
+-var titles = ['Chair','Vice Chair','Treasurer','Secretary']
+-var headshots = ['/img/dan-whitehurst.jpg','/img/jack-stuart.jpg','/img/leslie-moreland.jpg','/img/jodine-whisten.png']
+-if(!teambg) teambg=""
+section.section.our-team#team(class="#{teambg}")
+  -var sectiontitle = 'Board Members'
+  include ../globals/_section-title.jade
+  .container
+    .row
+      case teamnumber
+        when "teampage"
+          -for(x=1;x<9;x++)
+            .col-md-6.team-member-wrap(class="wow fadeInUp" data-wow-delay="0.{x}s")
+              .team-member
+                  .col-md-6.col-sm-5.col-xs-12.nopadding-left
+                      .img
+
+
+                        img(src="http://placehold.it/270x175", alt="")
+                  .col-md-6.col-sm-7.col-xs-12.nopadding-right.nopadding-left
+
+
+                    h4 #{teamnames[x]}
+                    span.title CEO / Founder
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+
+        default
+          -for(x=0;x<4;x++)
+            .col-md-6.team-member-wrap(class="wow fadeInUp" data-wow-delay="0.#{x}s")
+              .team-member
+                  .col-md-4.col-sm-4.col-xs-12.nopadding-left
+                      .img
+                        img(src!="<?php bloginfo('template_directory'); ?>#{headshots[x]}", alt="")
+
+                  .col-md-6.col-sm-7.col-xs-12.nopadding-right.nopadding-left
+                    h4 #{teamnames[x]}
+                    span.title #{titles[x]}
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+
